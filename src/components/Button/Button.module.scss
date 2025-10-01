@@ -1,0 +1,9 @@
+// Button Style for Testing
+@import '../../styles/_variables.scss';
+
+.button {
+    background-color: $primary-color;
+    color: yellow;
+    padding: $spacing-unit * 2 $spacing-unit * 4;
+    font-family: $font-stack; 
+}
