@@ -1,4 +1,4 @@
-import '../../../dist/style.css'
+import '../../../dist/styles/style.css'
 
 const Navbar = () => {
     return (

@@ -8,7 +8,7 @@
 
 
 // import { useState } from 'react'
-import '../dist/style.css';
+import '../dist/styles/style.css';
 import buttonstyles from '../dist/components/Button/Button.module.css';
 import Navbar from './components/Navbar/Navbar';
 
