@@ -11,6 +11,7 @@ import '../dist/styles/style.css';
 import buttonstyles from '../dist/components/Button/Button.module.css';
 import Navbar from './components/Navbar/Navbar';
 import { Hero } from './components/Hero Main/HeroMain';
+import Modal from './components/Modal/Modal';
 
 function App() {
   const [themeMode, setThemeMode] = useState('is-paper');
@@ -33,6 +34,8 @@ function App() {
   return (
     <>
       <Navbar />
+      <br />
+      <Modal />
       <br />
       <section className='p-section' style={{justifySelf: 'center', justifyItems: 'center'}}>
           <h3>Theme Section</h3>
