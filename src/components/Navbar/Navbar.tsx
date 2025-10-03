@@ -1,8 +1,15 @@
 import '../../../dist/styles/style.css'
 import "../../../dist/components/Navbar/Navbar.css"
 import { Link } from 'react-router'
+import { useState } from 'react';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsOpen(prev => !prev)
+    }
+
     return (
         <nav className='navbar'>
             <header id="navigation" className="p-navigation is-dark">
@@ -27,24 +34,43 @@ const Navbar = () => {
                     </li>
                 </ul> */}
                 </div>
+
                 <nav className="p-navigation__nav" aria-label="Example main">
+                    <ul className="p-navigation__items">
+                        <li className={`p-navigation__item--dropdown-toggle ${isOpen ? 'is-active' : ""}`}>
+                            {/* <Link to ='/products' className='p-navigation__link'>Products</Link> */}
+                            <button className="p-navigation__link" aria-controls="link-2-menu" aria-expanded={isOpen} onClick={toggleDropdown}>Products</button>
+                            <ul className='p-navigation__dropdown' id="link-2-menu" aria-hidden={!isOpen}>
+                                <li>
+                                    <a href="#" className="p-navigation__dropdown-item">Introduction</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="p-navigation__dropdown-item">News</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="p-navigation__dropdown-item">Getting started - Command line</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="p-navigation__dropdown-item">Getting started - OpenStack</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="p-navigation__dropdown-item">Getting started - OpenNebula</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li className="p-navigation__item">
+                            {/* <Link to ='/services' className='p-navigation__link'>Services</Link> */}
+                        <a className="p-navigation__link" href="#">Services</a>
+                        </li>
+                        <li className="p-navigation__item">
+                            {/* <Link to ='/partners' className='p-navigation__link'>Partners</Link> */}
+                        <a className="p-navigation__link" href="#">Partners</a>
+                        </li>
+                    </ul>
+
                 <ul className="p-navigation__items">
                     <li className="p-navigation__item">
-                        <Link to ='/products' className='p-navigation__link'>Products</Link>
-                    {/* <a className="p-navigation__link" href="#">Products</a> */}
-                    </li>
-                    <li className="p-navigation__item">
-                        <Link to ='/services' className='p-navigation__link'>Services</Link>
-                    {/* <a className="p-navigation__link" href="#">Services</a> */}
-                    </li>
-                    <li className="p-navigation__item">
-                        <Link to ='/partners' className='p-navigation__link'>Partners</Link>
-                    {/* <a className="p-navigation__link" href="#">Partners</a> */}
-                    </li>
-                </ul>
-                <ul className="p-navigation__items">
-                    <li className="p-navigation__item">
-                    <Link to ='/sign-in' className='p-navigation__link'>Sign in</Link>
+                        <Link to ='/sign-in' className='p-navigation__link'>Sign in</Link>
                     </li>
                 </ul>
                 </nav>

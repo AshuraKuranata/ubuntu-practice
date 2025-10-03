@@ -37,7 +37,7 @@ function App() {
       <section className='p-section' style={{justifySelf: 'center', justifyItems: 'center'}}>
           <h3>Theme Section</h3>
           <p >Current mode is: {themeMode}</p>
-          <button onClick={handleThemeMode}>Change Theme</button>
+          <button onClick={handleThemeMode}>Cycle Theme</button>
       </section>
       
       <Hero 

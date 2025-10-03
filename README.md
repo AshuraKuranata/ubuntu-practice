@@ -25,3 +25,5 @@ Prepared PostgreSQL Django back-end server to be hosted on AWS EC2 server in bac
 Built Hero component for utilization via Vanilla Framework.  Created two separate instances of heros to show variability of content.
 
 Added in DOM manipulation for site theme utilizing state variables
+
+Added dropdown to navigation bar
