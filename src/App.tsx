@@ -6,18 +6,40 @@
 // Build multiple components on the front end
 // Learn Vanilla usage 
 
-
-// import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../dist/styles/style.css';
 import buttonstyles from '../dist/components/Button/Button.module.css';
 import Navbar from './components/Navbar/Navbar';
 import { Hero } from './components/Hero Main/HeroMain';
 
 function App() {
+  const [themeMode, setThemeMode] = useState('is-paper');
+  
+  useEffect(() => {
+    document.body.classList.remove("is-paper", "is-dark", "is-light");
+    document.body.classList.add(themeMode);
+  })
+
+  const handleThemeMode = () => {
+    if (themeMode === 'is-paper') {
+      setThemeMode('is-dark')
+    } else if (themeMode === 'is-dark') {
+      setThemeMode('is-light')
+    } else if (themeMode === 'is-light') {
+      setThemeMode('is-paper')
+    }
+  }
 
   return (
     <>
       <Navbar />
+      <br />
+      <section className='p-section' style={{justifySelf: 'center', justifyItems: 'center'}}>
+          <h3>Theme Section</h3>
+          <p >Current mode is: {themeMode}</p>
+          <button onClick={handleThemeMode}>Change Theme</button>
+      </section>
+      
       <Hero 
         title="Hero Component"
         subtitle="Creating a hero component"
@@ -36,6 +58,7 @@ function App() {
           </>
         }
       />
+      <br />
       <Hero 
         title="Second Hero using component"
         subtitle="Re-utilizing Hero Component"
@@ -54,6 +77,7 @@ function App() {
           </>
         }
       />
+      <br />
       <Hero 
         title="Second Hero using component"
         subtitle="Re-utilizing Hero Component"
