@@ -1,20 +1,22 @@
 import '../../../dist/styles/style.css'
+import "../../../dist/components/Navbar/Navbar.css"
+import { Link } from 'react-router'
 
 const Navbar = () => {
     return (
-        <>
+        <nav className='navbar'>
             <header id="navigation" className="p-navigation is-dark">
             <div className="p-navigation__row--25-75">
                 <div className="p-navigation__banner">
                 <div className="p-navigation__tagged-logo">
-                    <a className="p-navigation__link" href="#">
-                    <div className="p-navigation__logo-tag">
-                        <img className="p-navigation__logo-icon" src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg" alt="" />
-                    </div>
-                    <span className="p-navigation__logo-title">Test Company</span>
-                    </a>
+                    <Link to ='/' className='p-navigation__link'>
+                        <div className="p-navigation__logo-tag">
+                            <img className="p-navigation__logo-icon" src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg" alt="" />
+                        </div>
+                        <span className="p-navigation__logo-title">[TEST] Ubuntu</span>
+                    </Link>
                 </div>
-                <ul className="p-navigation__items">
+                {/* <ul className="p-navigation__items">
                     <li className="p-navigation__item">
                     <button className="js-search-button p-navigation__link--search-toggle">
                         <span className="p-navigation__search-label">Search</span>
@@ -23,38 +25,32 @@ const Navbar = () => {
                     <li className="p-navigation__item">
                     <button className="js-menu-button p-navigation__link">Menu</button>
                     </li>
-                </ul>
+                </ul> */}
                 </div>
                 <nav className="p-navigation__nav" aria-label="Example main">
                 <ul className="p-navigation__items">
-                    <li className="p-navigation__item is-selected">
-                    <a className="p-navigation__link" href="#">Products</a>
+                    <li className="p-navigation__item">
+                        <Link to ='/products' className='p-navigation__link'>Products</Link>
+                    {/* <a className="p-navigation__link" href="#">Products</a> */}
                     </li>
                     <li className="p-navigation__item">
-                    <a className="p-navigation__link" href="#">Services</a>
+                        <Link to ='/services' className='p-navigation__link'>Services</Link>
+                    {/* <a className="p-navigation__link" href="#">Services</a> */}
                     </li>
                     <li className="p-navigation__item">
-                    <a className="p-navigation__link" href="#">Partners</a>
+                        <Link to ='/partners' className='p-navigation__link'>Partners</Link>
+                    {/* <a className="p-navigation__link" href="#">Partners</a> */}
                     </li>
                 </ul>
                 <ul className="p-navigation__items">
                     <li className="p-navigation__item">
+                    <Link to ='/sign-in' className='p-navigation__link'>Sign in</Link>
                     </li>
-                    <li className="p-navigation__item">
-                    <a className="p-navigation__link" href="#">Sign in</a>
-                    </li>
-
                 </ul>
                 </nav>
             </div>
             </header>
-
-            <div className="row--25-75">
-            <div className="col">
-                <h1>Page content in the grid</h1>
-            </div>
-            </div>
-        </>
+        </nav>
     );
 };
 

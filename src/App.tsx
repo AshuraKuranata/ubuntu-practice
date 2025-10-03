@@ -11,12 +11,69 @@
 import '../dist/styles/style.css';
 import buttonstyles from '../dist/components/Button/Button.module.css';
 import Navbar from './components/Navbar/Navbar';
+import { Hero } from './components/Hero Main/HeroMain';
 
 function App() {
 
   return (
     <>
       <Navbar />
+      <Hero 
+        title="Hero Component"
+        subtitle="Creating a hero component"
+        layout="25/75"
+        signpostImage={<img src="https://assets.ubuntu.com/v1/fe20126d-RISC-V-logo.svg" alt="RISC-V logo" style={{ maxWidth: "200px" }} />}
+        description={
+          <p>
+            Test Content that will populate over this space <br />
+            Cool writing description that shouldn't run too long
+          </p>
+        }
+        cta={
+          <>
+            <a href="#" className="p-button--positive">Learn more</a>
+            <a href="#">Contact us ›</a>
+          </>
+        }
+      />
+      <Hero 
+        title="Second Hero using component"
+        subtitle="Re-utilizing Hero Component"
+        layout="50/50"
+        signpostImage={<img src="https://assets.ubuntu.com/v1/fe20126d-RISC-V-logo.svg" alt="RISC-V logo" style={{ maxWidth: "200px" }} />}
+        description={
+          <p>
+            Another example use of the same hero component with different content <br />
+            Additional text that could explain what's going on here
+          </p>
+        }
+        cta={
+          <>
+            <a href="#" className="p-button--positive">Click for more information</a>
+            <a href="#">Contact us ›</a>
+          </>
+        }
+      />
+      <Hero 
+        title="Second Hero using component"
+        subtitle="Re-utilizing Hero Component"
+        layout="50/50"
+        signpostImage={<img src="https://assets.ubuntu.com/v1/fe20126d-RISC-V-logo.svg" alt="RISC-V logo" style={{ maxWidth: "200px" }} />}
+        description={
+          <p>
+            Another example use of the same hero component with different content <br />
+            Additional text that could explain what's going on here
+          </p>
+        }
+        cta={
+          <>
+            <a href="#" className="p-button--positive">Click for more information</a>
+            <a href="#">Contact us ›</a>
+          </>
+        }
+      />
+
+
       <div>
         <h1>"INSERT NAME HERE" Company</h1>
         <p>The quick brown <code>fox&nbsp;jumps</code> over the lazy dog.</p>

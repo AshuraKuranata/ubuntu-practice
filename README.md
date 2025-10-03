@@ -18,3 +18,9 @@ Project aim is the following:
 Initialization of React TSX and Vanilla Framework using installation guides.  Reviewed documentation to create /dist updates and watch-css builds on ongoing changes to SCSS files.
 
 Create basic webpage layout and began initial implementation of global Navbar component.  Also created button component with unique variable styles to test localized style sheets.
+
+Prepared PostgreSQL Django back-end server to be hosted on AWS EC2 server in backend repository 
+
+### 10.3.2025
+Built Hero component for utilization via Vanilla Framework.  Created two separate instances of heros to show variability of content.
+
