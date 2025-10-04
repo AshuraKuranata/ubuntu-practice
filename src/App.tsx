@@ -35,7 +35,8 @@ function App() {
     <>
       <Navbar />
       <br />
-      <Modal />
+      <Modal openModal='Example One Modal' title="Test Modal 1" description="Description Modal 1"/>
+      <Modal openModal='Second Example Modal' title="Modal Test 2" description="Another Example of Modal 2"/>
       <br />
       <section className='p-section' style={{justifySelf: 'center', justifyItems: 'center'}}>
           <h3>Theme Section</h3>
@@ -81,25 +82,6 @@ function App() {
         }
       />
       <br />
-      <Hero 
-        title="Second Hero using component"
-        subtitle="Re-utilizing Hero Component"
-        layout="50/50"
-        signpostImage={<img src="https://assets.ubuntu.com/v1/fe20126d-RISC-V-logo.svg" alt="RISC-V logo" style={{ maxWidth: "200px" }} />}
-        description={
-          <p>
-            Another example use of the same hero component with different content <br />
-            Additional text that could explain what's going on here
-          </p>
-        }
-        cta={
-          <>
-            <a href="#" className="p-button--positive">Click for more information</a>
-            <a href="#">Contact us ›</a>
-          </>
-        }
-      />
-
 
       <div>
         <h1>"INSERT NAME HERE" Company</h1>

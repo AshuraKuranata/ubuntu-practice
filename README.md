@@ -27,3 +27,5 @@ Built Hero component for utilization via Vanilla Framework.  Created two separat
 Added in DOM manipulation for site theme utilizing state variables
 
 Added dropdown to navigation bar
+
+Created Modal component: allows for some customization based on inputs into the modal props commands
